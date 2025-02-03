@@ -32,7 +32,7 @@ body { background-color: #F3B0C3;
 	<p style= "font-size: 20px:"> Happy Valentines day! I love you very much &lt;333 </p>
 	<p> This is a little webpage I made for you </p>
 	<p> Are you ready ?????? </p> 
-	<button onclick="ShowNextSection();">Take me on a journey</button>
+	<button onclick="showNextSection();">Take me on a journey</button>
 
 <div class="section">
         <p>This is the first section. Scroll down to see the next one!</p>
@@ -44,11 +44,12 @@ body { background-color: #F3B0C3;
     </div>
     <script>
         function showNextSection() {
-            // Scroll to the section
-            document.getElementById("next-section").scrollIntoView({ behavior: "smooth" });
+            // Show the next section
+            var nextSection = document.getElementById("next-section");
+            nextSection.style.display = "flex";  // Reveal the section
 
-            // After scrolling, display the next section
-            document.getElementById("next-section").style.display = "flex";
+            // Scroll to the next section
+            nextSection.scrollIntoView({ behavior: "smooth" });
         }
     </script>
 </body>
